@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script src="/path/to/app.js"></script>
+    <link href="/path/to/app.css" />
+  </head>
+  <body>
+    <div id="app-root"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        var app = new window.App();
+        if (app && app.start) {
+          app.start({ dealers: ['id1', 'id2'] });
+        }
+      });
+    </script>
+  </body>
+</html>
