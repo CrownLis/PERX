@@ -1,0 +1,16 @@
+.link {
+  :global {
+    .ant-typography {
+      color: #fff;
+      font-size: 14px;
+
+      @media (min-width: 576px) {
+        font-size: 16px;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 18px;
+      }
+    }
+  }
+}

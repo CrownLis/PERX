@@ -1,0 +1,9 @@
+.image {
+  padding: 12px;
+}
+
+.meta {
+  &:global(.ant-card-meta) {
+    margin-bottom: 24px;
+  }
+}
