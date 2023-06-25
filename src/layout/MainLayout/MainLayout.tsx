@@ -1,14 +1,11 @@
-import React from "react"
-import { Layout } from "antd"
-import {
-  Header as AntdHeader,
-  Content as AntdContent,
-} from "antd/es/layout/layout"
-import { Outlet } from "react-router-dom"
+import React from 'react';
+import { Layout } from 'antd';
+import { Header as AntdHeader, Content as AntdContent } from 'antd/es/layout/layout';
+import { Outlet } from 'react-router-dom';
 
-import { Header } from "@/components"
+import { Header } from '@/components';
 
-import styles from "./MainLayout.module.scss"
+import styles from './MainLayout.module.scss';
 
 export function MainLayout() {
   return (
@@ -20,5 +17,5 @@ export function MainLayout() {
         <Outlet />
       </AntdContent>
     </Layout>
-  )
+  );
 }

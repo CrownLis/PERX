@@ -1,9 +1,9 @@
-import React from "react"
-import { HashRouter, Route, Routes } from "react-router-dom"
+import React from 'react';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import { ROUTES } from "@/constants/routes"
-import { Basket, List } from "@/pages"
-import { MainLayout } from "@/layout"
+import { ROUTES } from '@/constants/routes';
+import { Basket, List } from '@/pages';
+import { MainLayout } from '@/layout';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         </Route>
       </Routes>
     </HashRouter>
-  )
+  );
 }
 
-export default App
+export default App;

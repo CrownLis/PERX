@@ -1,8 +1,8 @@
 export type Settings = {
-  dealers: string[]
-}
+  dealers: string[];
+};
 
 export interface IApp {
-  rootId: string
-  start(settings: Settings): void
+  rootId: string;
+  start(settings: Settings): void;
 }

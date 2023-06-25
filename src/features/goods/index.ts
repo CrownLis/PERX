@@ -1,3 +1,3 @@
-import goodsReducer from "./reducer"
+import goodsReducer from './reducer';
 
-export { goodsReducer }
+export { goodsReducer };

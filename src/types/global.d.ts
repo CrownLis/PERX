@@ -1,7 +1,7 @@
 declare global {
   interface Window {
-    App: any
+    App: any;
   }
 }
 
-export {}
+export {};

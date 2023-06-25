@@ -1,60 +1,56 @@
-import { createEntityAdapter, createSlice } from "@reduxjs/toolkit"
+import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 
-import { BasketItem } from "./types"
+import { BasketItem } from './types';
 import {
   addToBasket,
   changeInBasket,
   removeAllBasket,
   removeFromBasket,
-} from "./actions"
+} from './actions';
 
 export const basketAdapter = createEntityAdapter<BasketItem>({
-  selectId: (basket) => basket.goods.id,
-})
+  selectId: basket => basket.goods.id,
+});
 
 export const basketSlice = createSlice({
-  name: "basket",
+  name: 'basket',
   initialState: basketAdapter.getInitialState(),
   reducers: {},
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder.addCase(addToBasket, (state, action) => {
-      const goods = action.payload
+      const goods = action.payload;
 
-      const basketItem = basketAdapter
-        .getSelectors()
-        .selectById(state, goods.id)
+      const basketItem = basketAdapter.getSelectors().selectById(state, goods.id);
 
       basketAdapter.setOne(state, {
         count: !basketItem ? 1 : basketItem.count + 1,
         goods,
-      })
-    })
+      });
+    });
     builder.addCase(changeInBasket, (state, action) => {
-      const { goodsId, count } = action.payload
+      const { goodsId, count } = action.payload;
 
       if (!count) {
-        basketAdapter.removeOne(state, goodsId)
+        basketAdapter.removeOne(state, goodsId);
       } else {
-        const basketItem = basketAdapter
-          .getSelectors()
-          .selectById(state, goodsId)
+        const basketItem = basketAdapter.getSelectors().selectById(state, goodsId);
         if (basketItem) {
           basketAdapter.setOne(state, {
             ...basketItem,
             count,
-          })
+          });
         }
       }
-    })
+    });
     builder.addCase(removeFromBasket, (state, action) => {
-      const goodsId = action.payload
+      const goodsId = action.payload;
 
-      basketAdapter.removeOne(state, goodsId)
-    })
-    builder.addCase(removeAllBasket, (state) => {
-      basketAdapter.removeAll(state)
-    })
+      basketAdapter.removeOne(state, goodsId);
+    });
+    builder.addCase(removeAllBasket, state => {
+      basketAdapter.removeAll(state);
+    });
   },
-})
+});
 
-export default basketSlice.reducer
+export default basketSlice.reducer;

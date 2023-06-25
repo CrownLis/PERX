@@ -1,13 +1,16 @@
 {
+  "homepage": "http://CrownLis.github.io/PERX",
   "name": "perx",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "private":"false",
+  "private": "false",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "start": "webpack serve --mode development"
+    "start": "webpack serve --mode development",
+    "deploy": "gh-pages -d build",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -16,7 +19,6 @@
     "@ant-design/icons": "^5.1.4",
     "@reduxjs/toolkit": "^1.8.1",
     "antd": "^5.6.1",
-    "dotenv-webpack": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.1",
@@ -28,6 +30,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
+    "gh-pages": "^5.0.0",
     "@babel/preset-typescript": "^7.22.5",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.3.1",
@@ -35,6 +38,7 @@
     "@types/react-dom": "^18.2.6",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.0.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-prettier": "^4.2.1",

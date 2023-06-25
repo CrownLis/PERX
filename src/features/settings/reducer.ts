@@ -1,15 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from '@reduxjs/toolkit';
 
-import { SettingsState } from "./types"
+import { SettingsState } from './types';
 
 const initialState: SettingsState = {
   dealers: [],
-}
+};
 
 export const settingSlice = createSlice({
-  name: "settings",
+  name: 'settings',
   initialState,
   reducers: {},
-})
+});
 
-export default settingSlice.reducer
+export default settingSlice.reducer;

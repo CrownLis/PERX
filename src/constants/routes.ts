@@ -1,4 +1,4 @@
 export const ROUTES = {
-  ROOT: "/",
-  BASKET: "/basket",
-}
+  ROOT: '/',
+  BASKET: '/basket',
+};

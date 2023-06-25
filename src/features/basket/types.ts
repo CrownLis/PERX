@@ -1,6 +1,6 @@
-import { Goods } from "@/features/goods/types"
+import { Goods } from '@/features/goods/types';
 
 export type BasketItem = {
-  goods: Goods
-  count: number
-}
+  goods: Goods;
+  count: number;
+};

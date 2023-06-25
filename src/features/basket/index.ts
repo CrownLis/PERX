@@ -1,3 +1,3 @@
-import basketReducer from "./reducer"
+import basketReducer from './reducer';
 
-export { basketReducer }
+export { basketReducer };

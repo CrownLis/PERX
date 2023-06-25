@@ -1,3 +1,3 @@
-import { Settings } from "@/types/app"
+import { Settings } from '@/types/app';
 
-export type SettingsState = Settings
+export type SettingsState = Settings;

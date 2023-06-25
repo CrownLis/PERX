@@ -14,15 +14,14 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type="module" src="/src/main.tsx"></script>
     <div id="app-root"></div>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        var app = new window.App()
+      document.addEventListener('DOMContentLoaded', () => {
+        var app = new window.App();
         if (app && app.start) {
-          app.start({ dealers: ["0c4aab30", "1efa7e46"] })
+          app.start({ dealers: ['0c4aab30', '1efa7e46'] });
         }
-      })
+      });
     </script>
   </body>
 </html>

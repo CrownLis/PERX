@@ -1,14 +1,9 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-export const Header:FC = () => {
-  
-  
-    return (
+export const Header: FC = () => {
+  return (
     <header>
-        <div>
-            
-        </div>
+      <div></div>
     </header>
-    );
-  };
-  
+  );
+};

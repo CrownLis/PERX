@@ -1,3 +1,3 @@
-import settingsReducer from "./reducer"
+import settingsReducer from './reducer';
 
-export { settingsReducer }
+export { settingsReducer };
